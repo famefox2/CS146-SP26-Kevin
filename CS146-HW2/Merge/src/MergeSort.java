@@ -41,8 +41,9 @@ public class MergeSort {
     }
 
     public static void main(String[] args){
+        //Unit testing
         System.out.println();
-        
+        //Test 1
         System.out.println("Test 1: Same size array");
         int left[] = {1,15,26};
         int right[] ={1,3,7};
@@ -56,6 +57,10 @@ public class MergeSort {
         }
 
         System.out.println();
+        System.out.println("Length of new Array: " + sortedNums.length);
+        System.out.println();
+
+        //Test 2
         System.out.println("Test 2: Right array larger");
         int[] testL = {2,7,8};
         int[] testR ={0,4,5,9};
@@ -67,9 +72,12 @@ public class MergeSort {
         for(int i: testArray){
             System.out.print(i+ ", ");
         }
+        System.out.println();
+        System.out.println("Length of new Array: " + testArray.length);
 
         System.out.println();
 
+        //Test 3
         System.out.println("Test 3: Left array larger");
         int testL2[] = {0,1,4,7,8};
         int testR2[] = {2,5,9};
@@ -82,7 +90,10 @@ public class MergeSort {
         }
          
         System.out.println();
+        System.out.println("Length of new Array: " + (testL2.length + testR2.length));
+        System.out.println();
 
+        //Test 4
         System.out.println("Test 4: Right Array filled with one value");
         int testL4[] = {0,1,4,7,8};
         int testR4[] = {5,5,5,5,5};
@@ -94,5 +105,11 @@ public class MergeSort {
         for(int num: mergeArray(testL4,testR4)){
             System.out.print(num+ ", ");
         }
+        System.out.println();
+        System.out.println("Length of new Array: " + (testL4.length+ testR4.length));
+        
+        /*
+        The length of new array is the total length of the two array left.length+right.length.
+         */
     }
 }
