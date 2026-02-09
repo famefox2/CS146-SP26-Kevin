@@ -76,7 +76,7 @@ public class Partition {
         System.out.println();
         
         if(name.equals( "Hoare")){
-            printPartitions(a, index+1);
+            printPartitionsH(a, index+1);
         }
         else{
             
@@ -177,6 +177,7 @@ public class Partition {
        
     }
 }
+
 
 
 
