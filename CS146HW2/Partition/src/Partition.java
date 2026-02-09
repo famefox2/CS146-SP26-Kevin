@@ -34,7 +34,7 @@ public class Partition {
             array[i] = temp;
             
         }
-        return j+1;
+        return -1;
     }
     /**
      * Finds the partition index and partition the array using the lomuto partition method using index low oif the array as the key
@@ -177,4 +177,5 @@ public class Partition {
        
     }
 }
+
 
