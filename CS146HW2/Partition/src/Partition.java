@@ -98,7 +98,7 @@ public class Partition {
         }
          System.out.print("} Right{");
 
-        for(int j= index+1; j < a.length; ++j){
+        for(int j= index; j < a.length; ++j){
             System.out.print(a[j] + ", ");
         }
         System.out.println("}");
@@ -177,6 +177,7 @@ public class Partition {
        
     }
 }
+
 
 
 
