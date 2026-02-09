@@ -172,11 +172,13 @@ public class Partition {
        /*
         From what i see the lomuto method put the pivot number in the correct position in the array
        compared to hoare but both do split the numbers to arrays before the pivot and after the pivot.
+       The methods do not swap the numbers if the array is already sorted.
        */
         
        
     }
 }
+
 
 
 
