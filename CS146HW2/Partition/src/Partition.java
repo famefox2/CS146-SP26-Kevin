@@ -27,7 +27,7 @@ public class Partition {
             } while(array[i]<key);
 
             if(i>=j){
-                return j+1;
+                return j;
             }
             temp = array[j];
             array[j]= array[i];
@@ -63,7 +63,7 @@ public class Partition {
         
     }
     /**
-     * 
+     * Print the array and its first partition
      * @param a array to be printed
      * @param name name of the partition method
      * @param index partition index of the array
@@ -87,18 +87,18 @@ public class Partition {
 
    
     /**
-     * Print the partitions
+     * Print the partitions of the array
      * @param a the enitre array
      * @param index the index partition to split the array in two
      */
-    public static void printPartitions(int[] a, int index){
+    public static void printPartitionsH(int[] a, int index){
         System.out.print("Left{");
         for(int i =0; i< index; ++i){
             System.out.print(a[i] + ", ");
         }
          System.out.print("} Right{");
 
-        for(int j= index; j < a.length; ++j){
+        for(int j= index+1; j < a.length; ++j){
             System.out.print(a[j] + ", ");
         }
         System.out.println("}");
@@ -177,3 +177,4 @@ public class Partition {
        
     }
 }
+
