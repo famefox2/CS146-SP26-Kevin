@@ -44,6 +44,23 @@ public class WordFreq {
     public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
+
+    public static void maxHeap(ArrayList<WordFreq> list, int i){
+        int largest;
+        int leftNode = 2*i+1; // left child node index
+        int rightNode = 2*i+2; // right child node index
+        if(leftNode<= list.size() && list.get(leftNode).getFrequency() > list.get(i).getFrequency()){
+            largest = leftNode;
+        }
+        else{
+            largest = i;
+        }
+        if(rightNode <= list.size() && list.get(rightNode).getFrequency() > list.get(largest).getFrequency()){
+            largest = rightNode;
+        }
+        System.out.println(list.get(largest).toString());
+
+    }
     /**
      * Builds a max heap from array list of wordfreq objects
      * @param list Array List of wordfreq objects
@@ -77,7 +94,15 @@ public class WordFreq {
         for(WordFreq wf: list){
             System.out.println(wf.toString());
         }
-        System.out.println("");
+        //test max heap method
+        maxHeap(list, 0);
+        System.out.println("Largest should be \"happy, 400\" at index 0");
+        maxHeap(list, 1);
+        System.out.println("Largest should be \"would buy again, 200\" at index 1");
+        maxHeap(list, 3);
+        System.out.println("Largest should be \"would recommend to friends, 800\" at index 3");
+        maxHeap(list, 6);
+        System.out.println("Largest should be \"difficult to use, 100\" at index 6");
     }
 
 }
