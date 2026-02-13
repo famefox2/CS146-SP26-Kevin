@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 /**
- * WordFreq stores a phrase and its frequency
+ * WordFreq stores a phrase and its frequency. 
  * @author Kevin Thai 
  */
 public class WordFreq {
@@ -42,9 +44,40 @@ public class WordFreq {
     public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
+    /**
+     * Builds a max heap from array list of wordfreq objects
+     * @param list Array List of wordfreq objects
+     */
+    public static void buildMaxHeap(ArrayList<WordFreq> list){
+
+
+    }
+    /**
+     * Return a string of the word and the frequency;
+     * @Return the word and frequency of WordFreq
+     */
+    @Override
+    public String toString(){
+        return word +", " +frequency;
+    }
     public static void main(String[] args) {
-        
-            System.out.println("");
+        ArrayList<WordFreq> list = new ArrayList<>();
+        WordFreq phrase = new WordFreq("happy", 400);
+        list.add(phrase);
+        list.add(new WordFreq("satisfied",100));
+        list.add(new WordFreq("neutral",300));
+        list.add(new WordFreq("would buy again", 200));
+        list.add(new WordFreq("terrible", 160));
+        list.add(new WordFreq("inconvenient",900));
+        list.add(new WordFreq("difficult to use", 100));
+        list.add(new WordFreq("easy to use", 140));
+        list.add(new WordFreq("would recommend to friends", 800));
+        list.add(new WordFreq("visit the store", 700));
+
+        for(WordFreq wf: list){
+            System.out.println(wf.toString());
         }
+        System.out.println("");
+    }
 
 }
